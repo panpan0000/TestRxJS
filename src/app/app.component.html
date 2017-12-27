@@ -1,2 +1,7 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<h1>{{message}}</h1>
+<app-board *ngIf="show1"></app-board>
+
+<app-board *ngIf="show2"></app-board>
+
+<button (click)="toggle1()"> Show or Hide 1</button>
+
+<button (click)="toggle2()"> Show or Hide 2</button>

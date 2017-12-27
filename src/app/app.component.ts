@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
 
 @Component({
   selector: 'app-root',
@@ -8,13 +6,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+   show1 = true;
+   show2 = true;
+   toggle1() : void {
+	   this.show1 = !this.show1;
+   }
+  toggle2() : void {
+	   this.show2 = !this.show2;
+   }   
 }
-  message: string;
-  ngOnInit(): void {
-    this.http.get('https://api.github.com/users/seeschweiler').subscribe(data => {
-	  message= data;
-      console.log(data);
-    });
-  }
-}
+
+
+
